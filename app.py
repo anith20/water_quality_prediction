@@ -13,9 +13,9 @@ with open('model (3).pkl', 'rb') as f:
 def home():
     return render_template('index.html')
 
-@app.route('/predict', methods=['POST'])
+@app.route('/predict', methods=['GET'])
 def predict():
-    if request.method == 'POST':
+    if request.method == 'GET':
         # Get input values from the form
         ammonia = float(request.form['ammonia'])
         aluminium = float(request.form['aluminium'])
