@@ -48,9 +48,9 @@ def predict():
 
          # Return the prediction result
         if prediction[0] == 0:
-            return render_template('result.html', prediction_text='Water is not safe to drink')
+            return render_template('index.html', prediction_text='Water is not safe to drink')
         else:
-            return render_template('result.html', prediction_text='Water is safe to drink')
+            return render_template('index.html', prediction_text='Water is safe to drink')
 
 if __name__ == '__main__':
     app.run(debug=True)
